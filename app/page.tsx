@@ -13,16 +13,17 @@ export default function Home() {
           <SideNav />
         </div>
         <div className="flex-grow p-6 md:overflow-y-auto md:p-12">
-          <About/>
-          <div className="mt-5">
-            <Experience experience={experiences}/>
-          </div>
-          <div id='projects'>
-            <Project projects={projects}/>
-          </div>
+          <section id="about">
+            <About />
+          </section>
+          <section id="experience" className="mt-32">
+            <Experience experience={experiences} />
+          </section>
+          <section id="projects" className="mt-32">
+            <Project projects={projects} />
+          </section>
         </div>
       </div>
-      
     </main>
-  )
+  );
 }

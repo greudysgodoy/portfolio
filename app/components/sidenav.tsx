@@ -29,9 +29,9 @@ export default function SideNav() {
         </div>
 
       </div>
-      <div className="flex grow flex-row justify-start space-x-2 md:flex-col md:space-x-0 md:space-y-2">
+      <nav className="flex grow flex-row justify-start space-x-2 md:flex-col md:space-x-0 md:space-y-2">
         <NavLinks />
-      </div>
+      </nav>
     </div>
   );
 }

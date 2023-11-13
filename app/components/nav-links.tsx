@@ -40,12 +40,13 @@ export default function NavLinks() {
   }, [params]);
 
   return (
-    <>
+    <ul>
       {links.map((link) => {
         const LinkIcon = link.icon;
         return (
+          <li key={link.name}>
           <Link
-            key={link.name}
+            
             href={link.href}
             className={clsx(
               "group flex items-center p-3 text-sm md:flex-none md:justify-start md:p-2 md:px-3",
@@ -68,8 +69,10 @@ export default function NavLinks() {
               }
               )}>{link.name}</p>
           </Link>
+
+          </li>
         );
       })}
-    </>
+    </ul>
   );
 }

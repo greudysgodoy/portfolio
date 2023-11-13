@@ -6,7 +6,7 @@ interface Props {
 
 export default function Experience({ experience }: Props) {
   return (
-    <div id="experience">
+    <div>
       {experience.map((item) => (
         <div
           key={item.id}
