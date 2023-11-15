@@ -3,7 +3,7 @@ import { inter } from "./ui/fonts";
 import "@/app/ui/global.css";
 
 export const metadata: Metadata = {
-  title: "Greudys Portfolio",
+  title: "Greudys Godoy",
   description: "My personal portfolio",
 };
 
