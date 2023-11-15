@@ -1,10 +1,14 @@
 import Link from "next/link";
-import NavLinks from "@/app/components/nav-links";
 import Image from "next/image";
+
+import NavLinks from "@/app/components/nav-links";
+import SocialMedia from "@/app/components/social-media";
+
+import { socialMedia } from "../constants/social-media";
 
 export default function SideNav() {
   return (
-    <div className="flex h-full flex-col">
+    <div className="flex h-full flex-col justify-between md:py-8">
       <div className="mb-2">
         <div className="flex justify-center">
           <Image
@@ -14,10 +18,9 @@ export default function SideNav() {
             width="500"
             height="500"
           />
-
         </div>
         <Link className="mb-4 flex justify-center" href="/">
-          <div className="text-slate-200 text-3xl md:text-6xl sm: font-bold tracking-tighter">
+          <div className="text-slate-200 text-2xl sm:text-4xl font-bold tracking-tighter">
             Greudys Godoy
           </div>
         </Link>
@@ -25,13 +28,16 @@ export default function SideNav() {
           Full Stack Software Engineer
         </div>
         <div className="mb-4 text-slate-400 text-base font-medium tracking-tight">
-        Soy un ingeniero en informática y Full Stack Developer apasionado por crear soluciones con tecnología actual. Me encanta combinar funcionalidad y diseño para hacer que las cosas sean geniales en línea
+          Soy ingeniero en informática y Full Stack Developer. Me gusta trabajar
+          con tecnología actual y crear soluciones informáticas a necesidades reales. Disfruto
+          trabajar en equipo y nunca dejar de aprender.
         </div>
-
+        <nav className="hidden md:block md:py-10">
+          <NavLinks />
+        </nav>
       </div>
-      <nav className="flex grow flex-row justify-start space-x-2 md:flex-col md:space-x-0 md:space-y-2">
-        <NavLinks />
-      </nav>
+
+      <SocialMedia links={socialMedia} />
     </div>
   );
 }

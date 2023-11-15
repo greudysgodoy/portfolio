@@ -8,13 +8,18 @@ interface Props {
 export default function Project({ projects }: Props) {
   
   return (
-    <div id="projects">
+    <div id="projects" className="p-3">
+      <div className="block md:hidden mb-6">
+        <h2 className="text-sm font-bold uppercase text-slate-200">
+          Proyectos
+        </h2>
+      </div>
       {projects.map((item) => (
         <div
           key={item.id}
-          className="group hover:bg-slate-800 p-3 rounded text-slate-400 grid grid-cols-3"
+          className="group hover:bg-slate-800 rounded text-slate-400 grid grid-cols-3 sm:py-7 py-5"
         >
-          <div className="col-span-1 mb-3 pr-3">
+          <div className="hidden col-span-3 sm:block sm:col-span-1 mb-3 pr-3">
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <Image
                 src={item.image}
@@ -29,7 +34,7 @@ export default function Project({ projects }: Props) {
               />
             </div>
           </div>
-          <div className="col-span-2">
+          <div className="col-span-3 sm:col-span-2">
             <div className="text-lg text-slate-200 md:group-hover:text-sky-500">
               {item.title}
             </div>
@@ -43,6 +48,21 @@ export default function Project({ projects }: Props) {
                 </li>
               ))}
             </ul>
+          </div>
+          <div className="block col-span-3 sm:hidden my-3">
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <Image
+                src={item.image}
+                alt={item.title}
+                className="rounded-lg"
+                sizes="100vw"
+                // Make the image display full width
+                style={{
+                  width: '70%',
+                  height: 'auto',
+                }}
+              />
+            </div>
           </div>
         </div>
       ))}

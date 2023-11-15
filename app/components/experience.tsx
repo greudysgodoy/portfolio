@@ -6,16 +6,21 @@ interface Props {
 
 export default function Experience({ experience }: Props) {
   return (
-    <div>
+    <div className="p-3">
+      <div className="block md:hidden mb-6">
+        <h2 className="text-sm font-bold uppercase text-slate-200">
+          Experiencia
+        </h2>
+      </div>
       {experience.map((item) => (
         <div
           key={item.id}
-          className="group hover:bg-slate-800 p-3 rounded text-slate-400 grid grid-cols-3"
+          className="group hover:bg-slate-800 rounded text-slate-400 grid grid-cols-3 py-3"
         >
-          <div className="col-span-1 mb-3">
+          <div className="col-span-3 sm:col-span-1 mb-3">
             <div className="text-slate-400">{item.date}</div>
           </div>
-          <div className="col-span-2">
+          <div className="col-span-3 sm:col-span-2">
             <div className="text-lg text-slate-200 md:group-hover:text-sky-500">
               {item.title} - {item.company}
             </div>

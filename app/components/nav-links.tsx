@@ -14,17 +14,17 @@ import clsx from "clsx";
 // Depending on the size of the application, this would be stored in a database.
 const links = [
   {
-    name: "ABOUT",
+    name: "ACERCA DE MI",
     href: "#about",
     icon: HomeIcon
   },
   {
-    name: "EXPERIENCE",
+    name: "EXPERIENCIA",
     href: "#experience",
     icon: DocumentDuplicateIcon,
   },
   {
-    name: "PROJECTS",
+    name: "PROYECTOS",
     href: "#projects",
     icon: UserGroupIcon
   },
@@ -62,7 +62,7 @@ export default function NavLinks() {
               )}
               ></div>
             <p className={clsx(
-              "hidden md:block group-hover:text-slate-300",
+              "group-hover:text-slate-300",
               {
                 "text-slate-300": hash === link.href,
                 "text-slate-400": hash !== link.href,
